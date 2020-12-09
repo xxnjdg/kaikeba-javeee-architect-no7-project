@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+    <bean id="edge" class="io.xxnjdg.spring.po.Edge" init-method="init">
+        <property name="age" value="4" ></property>
+        <property name="name" value="the edge"></property>
+    </bean>
+
+    <bean id="shutter" class="io.xxnjdg.spring.po.Shutter">
+        <constructor-arg name="name" value="the shutter"></constructor-arg>
+        <constructor-arg name="age" value="1"></constructor-arg>
+    </bean>
+
+    <bean id="YoYoFactory" class="io.xxnjdg.spring.po.YoYoFactory" >
+        <property name="edge" ref="edge" ></property>
+        <property name="shutter" ref="shutter"></property>
+    </bean>
+
+</beans>

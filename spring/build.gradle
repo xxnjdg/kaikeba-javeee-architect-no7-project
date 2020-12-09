@@ -1,0 +1,19 @@
+subprojects {
+    apply plugin: 'java'
+    apply plugin: "application"
+    apply plugin: "org.springframework.boot"
+
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+
+    dependencyManagement {
+        dependencies {
+            dependency "dom4j:dom4j:1.6.1"
+        }
+    }
+
+    dependencies {
+        implementation "dom4j:dom4j"
+    }
+
+}

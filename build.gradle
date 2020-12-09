@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version "${springBootVersion}" apply false
+    id 'io.spring.dependency-management' version "1.0.10.RELEASE" apply false
+}
+
+description = '开课吧JavaEE架构师第七期学习笔记'
+
+allprojects {
+    apply plugin: 'io.spring.dependency-management'
+
+    group 'io.xxnjdg'
+    version '1.0-SNAPSHOT'
+
+    dependencyManagement {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBootVersion}"
+            mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+            mavenBom "com.alibaba.cloud:spring-cloud-alibaba-dependencies:${springCloudAlibabaVersion}"
+        }
+    }
+
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+}
