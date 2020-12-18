@@ -18,4 +18,8 @@ include 'algo:java'
 findProject(':algo:java')?.name = 'java'
 include 'data-structures:linked-list'
 findProject(':data-structures:linked-list')?.name = 'linked-list'
+include 'data-structures:sort'
+findProject(':data-structures:sort')?.name = 'sort'
+include 'data-structures:tree'
+findProject(':data-structures:tree')?.name = 'tree'
 
